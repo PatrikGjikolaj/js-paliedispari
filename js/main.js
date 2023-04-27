@@ -1,3 +1,5 @@
+// Palindromo
+
 let verifica = document.getElementById("verifica");
 let parolaInversa = invertiParola(parola);
 
@@ -23,3 +25,46 @@ function invertiParola(parola){
 
   return parolaInversa;
 }
+
+// Pari o dispari
+
+let gioca = document.getElementById("gioca");
+let numeroComputer = getRandomNumber(1, 5);  
+
+
+
+
+gioca.addEventListener("click", function(){
+
+let inputUtenteOk = false;
+
+let numeroUtente = document.getElementById("numeroUtente").value;
+
+
+let previsioneUtente = document.getElementById("pod").value;
+
+let somma = (+numeroUtente)+(+numeroComputer);
+
+let esito = getPariOrDispari(somma);
+
+console.log(`Numero utente: ${numeroUtente} - Numero computer: ${numeroComputer}`);
+  if(esito == previsioneUtente){
+    document.getElementById("risultatoPod").innerText = "Hai vinto";
+  }else{
+    document.getElementById("risultatoPod").innerText = "Hai perso";
+  }
+  console.log(`Il numero ${somma} è ${esito}`);
+} );
+
+function getRandomNumber(min, max){
+  return Math.floor( Math.random() * (max - min + min) + min );
+}
+function getPariOrDispari (numero) {
+  let risultato;
+
+  if(numero % 2 ==0){
+  risultato = "pari"
+}else {
+  risultato = "dispari"
+}
+return risultato}

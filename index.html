@@ -9,7 +9,7 @@
 </head>
 <body>
     <main>
-        <div class="container-fluid">
+        <div class="container-fluid my-5">
             <section class="row">
                 <form class="col-8 offset-2 my-3" action="#">
                     <div class="mb-3">
@@ -20,6 +20,29 @@
                     <button id="verifica" class="btn btn-primary">Verifica</button>
                 </form>
             </section>
+        </div>
+        <div class="container-fluid my-5">
+            <div class="row my-3">
+                <div class="col-8 offset-2">
+                    <h4>Inserisci Pari o dispari e seleziona un numero da 1 a 5 compresi</h4>
+                </div>
+                <form class="col-8 offset-2" action="#">
+                    <div class="mb-3">
+                        <label for="exampleInputEmail1" class="form-label">Pari o dispari?</label>
+                        <input type="text" id="pod" class="form-control" placeholder="Inserisci pari o dispari">
+                    </div>
+                </form>    
+            </div>
+            <div class="row">
+                <form class="col-8 offset-2" action="#">
+                    <div class="mb-3">
+                        <label for="exampleInputEmail1" class="form-label">Numero da 1 a 5</label>
+                        <input type="number" id="numeroUtente" class="form-control" placeholder="Inserisci qui un numero da 1 a 5">
+                        <div id="risultatoPod" class="form-text"></div>
+                    </div>
+                    <button type="submit" id="gioca" class="btn btn-primary">Gioca</button>
+                </form>    
+            </div>
         </div>
     </main>
     <script src="./js/main.js"></script>
